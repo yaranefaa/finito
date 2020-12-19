@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Finito - Schedule optimizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Invitex is event and conference website template">
+    <meta name="author" content="">
+
+    <!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<![endif]-->
+
+    <!-- CSS Files
+    ================================================== -->
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery.countdown.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/color.css" type="text/css">
+	<link rel="stylesheet" href="css/colors/orange.css" type="text/css">
+    <link rel="stylesheet" href="css/colors/gradient-1.css" type="text/css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome/css/light.min.css">
+    <link rel="stylesheet" href="fontawesome/css/brands.min.css">
+    <link rel="stylesheet" href="fontawesome/css/regular.min.css">
+    <link rel="stylesheet" href="fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="fontawesome/css/duotone.min.css">
+    <link rel="stylesheet" href="fontawesome/css/svg-with-js.min.css">
+    <link rel="stylesheet" href="fontawesome/css/v4-shims.min.css">
+        <link rel="icon" href="images/accomplish.png">
+    <!-- background -->
+    <link rel="stylesheet" href="css/bg.css" type="text/css">
+    
+    <link rel="stylesheet" href="css/taskstyle.css" type="text/css">
+</head>
+<audio src="assets/stylish.mp3" autoplay="" >
+    <embed name="GoodEnough" src="assets/stylish.mp3" loop="false" hidden="true" autostart="true">
+    </audio>
+<body id="homepage">
+
+    <div id="wrapper">
+
+        <!-- header begin -->
+        <header>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="logo">
+                            <a href="/">
+                                <img class="logo" src="images/logo-white.png" alt="">
+                                <img class="logo-2" src="images/logo-dark.png" alt="">
+                            </a>
+                        </div>
+                        <span id="menu-btn"></span>
+                        <nav>
+                            <ul id="mainmenu">
+                                
+                                <li ><a href="/" id="getstarted">Sign out</a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <div id="content" class="no-bottom no-top">
+            <div id="top"></div>
+
+            
+           
+          <div class="row">
+            <section  class="no-top no-bottom " data-stellar-background-ratio=".2">
+                <div class="overlay-gradient pt80 pb80">
+                    <div class="container mt-5">
+                        <div class="row row-eq-height">
+                            <div class="col-lg-9">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="taskstile">
+                                            <h3 class="text-uppercase text-purple">Current task <i class="fa fa-arrow-right"></i></h2>
+                                            <h4 class="text-thin text-uppercase text-purple" id="currentTaskTitle">Meeting with John</h2>
+                                            <h4 class="text-thin text-uppercase text-purple"><span id="currentTaskFinish">39</span> Mins Remaining..</h2>
+                                            <div class="finito-bar-container">
+                                                <div class="float-right energy-icon"></div>
+                                                <div class="finito-energy-bar">
+                                                    <div class="bar" id="currentTaskResistance" style="width: 30%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="taskstile">
+                                            <h3 class="text-uppercase  text-purple">Next task <i class="fa fa-arrow-right"></i></h2>
+                                            <h4 class="text-thin text-uppercase text-purple" id="nextTaskTitle">Study for Web</h2>
+                                            <h4 class="text-thin text-uppercase text-purple" id="nextTaskStart">3:15 PM</h2>
+                                            <div class="finito-bar-container">
+                                                <div class="float-right energy-icon"></div>
+                                                <div class="finito-energy-bar">
+                                                    <div class="bar"id="nextTaskResistance" style="width: 60%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="taskstile">
+                                            <h3 class="text-uppercase text-purple">Day overview</h2>
+                                            <h4 class="text-thin text-uppercase text-purple" id="dateofday">4 Tasks Total</h2>
+                                            <h4 class="text-thin text-uppercase text-purple"><span id="totalhours">6</span> Hrs</h2>
+                                            <div class="finito-bar-container">
+                                                <div class="float-right energy-icon"></div>
+                                                <div class="finito-energy-bar">
+                                                    <div class="bar" style="width: 40%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="overview-btn full-width text-center text-uppercase mt-2" onclick="addTask()"> <a  class="text-white"><i class="fa fa-plus-circle"></i> Add new task</a></div>
+        
+                                <div class="row text-light mt-5">
+                                    
+                                   
+                                    <div class="col-md-12 wow fadeInUp">
+                                        <div class="span2">
+                                            
+<canvas id="myChart" width="400" height="400" color="white"></canvas>
+                                           </div>
+                                   
+<div id="chartjs-tooltip" class="center bottom text-center" style="opacity: 0;">
+    <span  id="spn-titles"></span>
+</div>
+
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <div class="col-lg-3 general-overview-container" >
+                                <div class="text-center mt-1"><h3>COMING SOON</h3></div>
+                                <hr style="margin: 10px;background-color: white;border-radius: 10px; border-color: white; height: 1px;">
+                                <div style="filter: blur(2px);"> 
+                                    <div class="overview-tile mt-1">
+                                    <h3 class="text-uppercase p-1">Monday 23 DEC</h3>
+                                    <hr class="full-white-hr">
+                                    <div class="float-right">
+                                        <div class="daily-resistance"></div>
+                                    </div>
+                                    <h3 class="text-uppercase mt-1 p-1">2 Tasks</h3>
+                                    <h3 class="text-uppercase p-1">5 Hrs</h3>
+                                </div>
+
+                                
+                                <div class="overview-tile mt-1">
+                                    <h3 class="text-uppercase p-1">Tuesday 24 DEC</h3>
+                                    <hr class="full-white-hr">
+                                    <div class="float-right">
+                                        <div class="daily-resistance"></div>
+                                    </div>
+                                    <h3 class="text-uppercase mt-1 p-1">2 Tasks</h3>
+                                    <h3 class="text-uppercase p-1">5 Hrs</h3>
+                                </div>
+
+                                
+                                <div class="overview-tile mt-1">
+                                    <h3 class="text-uppercase p-1">Wednesday 25 DEC</h3>
+                                    <hr class="full-white-hr">
+                                    <div class="float-right">
+                                        <div class="daily-resistance"></div>
+                                    </div>
+                                    <h3 class="text-uppercase mt-1 p-1">2 Tasks</h3>
+                                    <h3 class="text-uppercase p-1">5 Hrs</h3>
+                                </div>
+
+                                
+                                <div class="overview-tile mt-1">
+                                    <h3 class="text-uppercase p-1">Thursday 26 DEC</h3>
+                                    <hr class="full-white-hr">
+                                    <div class="float-right">
+                                        <div class="daily-resistance"></div>
+                                    </div>
+                                    <h3 class="text-uppercase mt-1 p-1">2 Tasks</h3>
+                                    <h3 class="text-uppercase p-1">5 Hrs</h3>
+                                </div>
+
+                                
+                                <div class="overview-tile mt-1">
+                                    <h3 class="text-uppercase p-1">Friday 27 DEC</h3>
+                                    <hr class="full-white-hr">
+                                    <div class="float-right">
+                                        <div class="daily-resistance"></div>
+                                    </div>
+                                    <h3 class="text-uppercase mt-1 p-1">2 Tasks</h3>
+                                    <h3 class="text-uppercase p-1">5 Hrs</h3>
+                                </div>
+                                
+                                <div class="overview-tile mt-1">
+                                    <h3 class="text-uppercase p-1">Saturday 28 DEC</h3>
+                                    <hr class="full-white-hr">
+                                    <div class="float-right">
+                                        <div class="daily-resistance"></div>
+                                    </div>
+                                    <h3 class="text-uppercase mt-1 p-1">2 Tasks</h3>
+                                    <h3 class="text-uppercase p-1">5 Hrs</h3>
+                                </div>
+                                <div class="overview-tile mt-1">
+                                    <h3 class="text-uppercase p-1">Sunday 29 DEC</h3>
+                                    <hr class="full-white-hr">
+                                    <div class="float-right">
+                                        <div class="daily-resistance"></div>
+                                    </div>
+                                    <h3 class="text-uppercase mt-1 p-1">2 Tasks</h3>
+                                    <h3 class="text-uppercase p-1">5 Hrs</h3>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+          </div>
+            
+
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 sm-text-center sm-mb10">
+                        <div class="mt10 purple">Created by <strong> Charbel Malo & Yara Nefaa</strong> </div>
+                    </div>
+
+                    <div class="col-md-6 text-right sm-text-center">
+                        <div class="footer-right">
+                            <a href="#"><img src="images/accomplish.png"> | </a>
+                            <a href="https://lau.edu.lb"><img src="images/lau.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        
+        <a href="#" id="back-to-top"></a>
+        <div id="preloader">
+            <div></div>
+        </div>
+
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/enquire.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.plugin.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+    <script src="js/countdown-custom.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc5d1RS_0yWJ1Hyw2hGWfbRZ9KKaxFAZo"></script>
+    <script src="js/map.js"></script>
+    <script src="js/designesia.js"></script>
+	<script src="js/validation.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+    <script>
+        $('#getstarted').click(function(){
+            $('#swipe-bar').addClass('active');
+        });
+        $('#exit_tab').click(function(){
+            $('#swipe-bar').removeClass('active');
+        });
+    </script>
+
+<script>
+    Chart.defaults.global.defaultFontColor = 'white';
+    var canvas = document.getElementById('myChart');
+    var currentHours = new Date().getHours();
+    var totaltasks=0;
+    var totalhours=0;
+    const urlParams = new URLSearchParams(window.location.search);
+    var results;
+    const myParam = urlParams.get('user_id');
+    var dateobj = new Date(urlParams.get('date'));
+    const datequery = (dateobj.getMonth()+1)+"-"+dateobj.getDate()+"-"+dateobj.getFullYear();
+    $('#dateofday').text(new Date(urlParams.get('date')).toString().slice(0,10));
+    var ajaxresults = $.ajax({
+        url: "/taskslist",
+  type: "GET",
+  data: {user_id: myParam,date: urlParams.get('date')},
+  dataType: "json",
+  success: function(data) {
+      results = data;
+      
+ 
+      var resistanceres = new Array(24);
+    var titlesres = new Array(24);
+//     if(results[currentHours]!=null){
+//                 $('#currentTaskTitle').text(results[currentHours].title);
+//                 $('#currentTaskResistance').css('width',results[currentHours].resistance*10+"%");
+//                 $('#currentTaskFinish').text(Math.round(((new Date(results[currentHours].end).valueOf())-(new Date().valueOf()))/1000/60));
+//                 var ajaxnext= $.ajax({
+//                      url: "/nexttask",
+//                         type: "GET",
+//                         data: {user_id: myParam, task_id: results[currentHours].id,date: new Date(parseInt(urlParams.get('date'))).valueOf()},
+//                         dataType: "json",
+//                         success: function(data) {
+//       if(data.start!=0){
+//           var datenext =new Date(data.start);
+//         $('#nextTaskTitle').text(data.title);
+//         $('#nextTaskStart').text(datenext.toLocaleTimeString());
+//         $('#nextTaskResistance').css('width',data.resistance*10+"%");
+//   }else{
+//     $('#nextTaskTitle').text(data.title);
+//         $('#nextTaskStart').text("Relax");
+//         $('#nextTaskResistance').css('width',"0%");
+//   }
+// }
+// });
+//                 }else{
+                    
+//                 $('#currentTaskTitle').text(results[currentHours].title);
+//                 $('#currentTaskEnd').text(results[currentHours].title);
+//                 }
+    for(var i=0;i<24;i++){
+        if(results[i]!=null){
+          
+        resistanceres[i]=results[i].resistance;
+        titlesres[i]=results[i].title;
+        totalhours++;
+    }else{
+        resistanceres[i]=0;
+        titlesres[i]=" ";
+
+        }
+        
+    }
+    $('#totalhours').text(totalhours);
+    var data = {
+        data: resistanceres,
+        titles: titlesres
+    }
+    var customTooltips = function (tooltip) {
+        // Tooltip Element
+        var tooltipEl = document.getElementById('chartjs-tooltip');
+
+        // Hide if no tooltip
+        if (tooltip.opacity === 0) {
+            tooltipEl.style.opacity = 0;
+            return;
+        }
+
+        // Set caret Position
+        tooltipEl.classList.remove('above', 'below', 'no-transform');
+        if (tooltip.yAlign) {
+            tooltipEl.classList.add(tooltip.yAlign);
+        } else {
+            tooltipEl.classList.add('no-transform');
+        }
+        
+        if (tooltip.dataPoints.length) {
+            var ind = tooltip.dataPoints[0].index;
+            $("#spn-leads").text(data.data[ind]);
+            $("#spn-titles").text(data.titles[ind]);
+        }
+
+        var positionY = this._chart.canvas.offsetTop;
+        var positionX = this._chart.canvas.offsetLeft;
+
+        // Display, position, and set styles for font
+        tooltipEl.style.opacity = 1;
+        tooltipEl.style.left = positionX + tooltip.caretX + 'px';
+        tooltipEl.style.top = positionY + tooltip.caretY + 'px';
+        tooltipEl.style.fontSize = tooltip.fontSize;
+        tooltipEl.style.fontStyle = tooltip._fontStyle;
+        tooltipEl.style.padding = tooltip.yPadding + 'px ' + tooltip.xPadding + 'px';
+    };
+
+    var lineData = {
+        labels: ["12 AM","1 AM", "2 AM","3 AM","4 AM","5 AM","6 AM","7 AM","8 AM", "9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM","3 PM","4 PM","5 PM","6 PM","7 PM","8 PM","9 PM","10 PM","11 PM"],
+        datasets: [
+            {
+                label: "Level of Resistance",
+                fill: true,
+                backgroundColor: "rgba(75,192,192,0.4)",
+                borderColor: "rgba(75,192,192,1)",
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: 'miter',
+                pointBorderColor: "rgba(75,192,192,1)",
+                pointBackgroundColor: "#fff",
+                pointBorderWidth: 1,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointHoverBorderWidth: 2,
+                pointRadius: 5,
+                pointHitRadius: 10,
+                data: data.data
+            }
+        ]
+    };
+
+
+    var option = {
+        title: {
+            display: false,
+            text: 'Monday 23 DEC'
+        },
+        tooltips: {
+            enabled: false,
+            mode: 'index',
+            position: 'nearest',
+            custom: customTooltips
+        },
+        scales:{
+            yAxes: [{
+                ticks: {
+                    suggestedMin: 0,
+                    suggestedMax: 10
+                }
+            }]
+        }
+    };
+    var myLineChart = Chart.Line(canvas, {
+        data: lineData,
+        options: option
+    });
+    }
+    });
+    function addTask(){
+    window.location.replace("/task?user_id="+myParam);
+}
+</script>
+<script>
+</script>
+</body>
+</html>

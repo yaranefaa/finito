@@ -1,0 +1,17 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1> Add Info <%= username %> </h1>
+        <form action="http://localhost:8081/addinfo" method="POST" enctype='multipart/form-data'>
+            <input type="hidden" value="<%= username %>" name="txt_user">
+            Text: <textarea name="txt_text"></textarea><br>
+            Image: <input type="file" name="fl_image" accept="image/*"><br>
+            <input type="submit" value="Submit"><br>
+        </form>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+        <script src="./signup.js"></script>
+    </body>
+</html>

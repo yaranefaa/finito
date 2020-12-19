@@ -1,0 +1,22 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p>Username: <%= username %> </p>
+        <p>Text: <p><%= text %></p> </p>
+        <p>Image: <img src="<%= imageurl %>"/> </p>
+        
+        <h1> Add task  </h1>
+        <form action="http://localhost:8081/task" method="POST">
+            title: <input type="text" name="tasktitle"><br>
+            notes: <input type="text" name="tasknote"><br>
+            taskstart: <input type="datetime" name="taskstart"><br>
+            taskend: <input type="datetime" name="taskend"><br>
+            resistance: <input type="number" name="resistance"><br>
+            priority: <input type="numbrt" name="priority"><br>
+            isfixed: <input type="number" name="isfixed"><br>
+            <input type="submit" value="Submit"><br>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,222 @@
+
+.taskstile{
+    background-color: white;
+    border-radius: 5px;
+    color:#625eee;
+    margin: 10px;
+    padding: 15px;
+}
+.taskstile,h1,h2,h3,h4,h5,h6,strong{
+    margin:0 !important;
+    margin-bottom: 5px;
+}
+.text-purple{
+    color: #625eee !important;
+}
+.text-uppercase{
+    text-transform: uppercase;
+}
+.text-thin{
+    font-weight: 300;
+}
+.text-thinner{
+    font-weight: 200;
+}
+.finito-bar-container{
+width: 100%;
+padding: 5px;
+}
+.finito-energy-bar{
+background-color: #625eee;
+padding: 2px;
+height: 10px;
+border-radius: 20px;
+}
+.finito-energy-bar .bar{
+    background-color: #28dc75;
+    height: 100%;
+    border-radius: 20px;
+}
+.energy-icon{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: white;
+    background-image: url('../images/modes/proplus.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: -5px;
+    box-shadow: 0px 0px 0 2px #625eee;
+}
+.general-overview-container{
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.068);
+    padding: 3px;
+}
+.overview-tile{
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.068);
+    margin: 5px ;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    transition: all 0.25s ease-in-out;
+}
+.overview-tile:hover{
+    background-color: rgba(255, 255, 255, 0.24);
+}
+
+.overview-btn{
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.068);
+    margin: 5px ;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+.overview-btn:hover{
+    background-color: rgba(255, 255, 255, 0.24);
+}
+.overview-btn a{
+    color: white;
+}
+.overview-btn a:hover{
+    color: white;
+}
+
+.daily-resistance{
+    width: 40px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: white;
+    background-image: url('../images/modes/proplus.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 5px;
+    box-shadow: 0px 0px 0 2px #635eee52;
+}
+.lform-input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.lform-input input{
+    width: 100%;
+    border-radius: 30px;
+    border: solid 2px;
+    padding: 5px;
+}
+.lform-input textarea{
+    width: 100%;
+    border-radius: 10px;
+    height: 100px;
+    border: solid 2px;
+    padding: 5px;
+}
+.lform-input input[type=submit]{
+    width: 100%;
+    border-radius: 30px;
+    border: solid 2px;
+    background-color:#625eee;
+    color: white;
+}
+/* MARGINS AND PADDINGS */
+.full-white-hr{
+    margin: 0;
+    height: 0;
+    border: solid 2px white;
+}
+.float-right{
+    float: right;
+}
+.mt-1{
+    margin-top:10px;
+}
+.mt-2{
+    margin-top:20px;
+}
+.mt-3{
+    margin-top:30px;
+}
+.mt-4{
+    margin-top:40px;
+}
+.mt-5{
+    margin-top:50px;
+}
+.pt-1{
+    padding-top:10px;
+}
+.pt-2{
+    padding-top:20px;
+}
+.pt-3{
+    padding-top:30px;
+}
+.pt-4{
+    padding-top:40px;
+}
+.pt-5{
+    padding-top:50px;
+}
+.p-1{
+    padding: 5px;
+}
+/* EQUAL COLS */
+/*
+
+ * Row with equal height columns
+
+ * --------------------------------------------------
+
+ */
+
+ .row-eq-height {
+
+    display: -webkit-box;
+  
+    display: -webkit-flex;
+  
+    display: -ms-flexbox;
+  
+    display:         flex;
+  
+  }
+  
+  canvas {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.full-width{
+    width: 100%;
+}
+#chartjs-tooltip {
+    opacity: 1;
+    position: absolute;
+    background: rgb(26, 22, 41);
+    color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    -webkit-transition: all .1s ease;
+    transition: all .1s ease;
+    pointer-events: none;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    min-width: 100px;
+    font-family: 'Montserrat';
+    padding: 0 20px;
+}
+
+.chartjs-tooltip-key {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+}   

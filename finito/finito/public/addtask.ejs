@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Finito - Schedule optimizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Invitex is event and conference website template">
+    <meta name="author" content="">
+
+    <!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<![endif]-->
+
+    <!-- CSS Files
+    ================================================== -->
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery.countdown.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/color.css" type="text/css">
+	<link rel="stylesheet" href="css/colors/orange.css" type="text/css">
+    <link rel="stylesheet" href="css/colors/gradient-1.css" type="text/css">
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome/css/light.min.css">
+    <link rel="stylesheet" href="fontawesome/css/brands.min.css">
+    <link rel="stylesheet" href="fontawesome/css/regular.min.css">
+    <link rel="stylesheet" href="fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="fontawesome/css/duotone.min.css">
+    <link rel="stylesheet" href="fontawesome/css/svg-with-js.min.css">
+    <link rel="stylesheet" href="fontawesome/css/v4-shims.min.css">
+        <link rel="icon" href="images/accomplish.png">
+    <!-- background -->
+    <link rel="stylesheet" href="css/bg.css" type="text/css">
+    
+    <link rel="stylesheet" href="css/taskstyle.css" type="text/css">
+</head>
+<audio src="assets/stylish.mp3" autoplay="" >
+    <embed name="GoodEnough" src="assets/stylish.mp3" loop="false" hidden="true" autostart="true">
+    </audio>
+<body id="homepage">
+
+    <div id="wrapper">
+
+        <!-- header begin -->
+        <header>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="logo">
+                            <a href="/">
+                                <img class="logo" src="images/logo-white.png" alt="">
+                                <img class="logo-2" src="images/logo-dark.png" alt="">
+                            </a>
+                        </div>
+                        <span id="menu-btn"></span>
+                        <nav>
+                            <ul id="mainmenu">
+                                
+                                <li ><a href="/" id="getstarted">Sign out</a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <div id="content" class="no-bottom no-top">
+            <div id="top"></div>
+
+            
+           
+          <div class="row">
+            <section  class="no-top no-bottom " data-stellar-background-ratio=".2" style="background-image: url('./images/background/2.jpg');">
+                <div class="overlay-gradient pt80 pb80">
+                    <div class="container mt-5">
+                        <div class="row row-eq-height">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="taskstile">
+                                            <h3 class="text-uppercase text-purple">Add new task <i class="fa fa-plus-circle"></i></h2>
+                                            <!-- <h4 class="text-thin text-uppercase text-purple">Meeting with John</h2>
+                                            <h4 class="text-thin text-uppercase text-purple">39 Mins Remaining..</h2>
+                                                <h1> Add task  </h1> -->
+                                                <form action="http://localhost:8081/task" method="POST" class="row">
+                                                    <div class="lform-input col-lg-12">
+                                                        <label for="tasktitle">Task Title:</label>
+                                                        <input type="text" name="tasktitle" id="tasktitle">
+                                                    </div>
+                                                    <div class="lform-input col-lg-6">
+                                                        <label for="taskstart">Task Start:</label>
+                                                        <input type="datetime-local" name="taskstart" id="taskstart">
+                                                    </div>
+                                                    <div class="lform-input col-lg-6">
+                                                        <label for="taskend">Task End:</label>
+                                                        <input type="datetime-local" name="taskend" id="taskend">
+                                                    </div>
+                                                    <div class="lform-input col-lg-12">
+                                                        <label for="tasknote">Task Notes:</label>
+                                                        <textarea id="tasknote" name="tasknote"></textarea>
+                                                    </div>
+                                                    <div class="lform-input col-lg-12">
+                                                        <label for="resistance">Level of resistance:</label>
+                                                        <input type="range" name="resistance" id="resistance" min="0" value="3" max="10" step="1">
+                                                    </div>
+                                                    
+                                                    <input type="hidden" name="username" id="txt_username" value="1">
+                                                    <input type="hidden" name="priority" value="1">
+                                                    <input type="hidden" name="isfixed" value="1">      
+                                                    <div class="lform-input col-lg-12"><input type="submit" value="Submit"></div>
+                                                </form>
+                                            <!-- <div class="finito-bar-container">
+                                                <div class="float-right energy-icon"></div>
+                                                <div class="finito-energy-bar">
+                                                    <div class="bar" style="width: 30%;"></div>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                                
+                               
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+          </div>
+            
+
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 sm-text-center sm-mb10">
+                        <div class="mt10 purple">Created by <strong> Charbel Malo & Yara Nefaa</strong> </div>
+                    </div>
+
+                    <div class="col-md-6 text-right sm-text-center">
+                        <div class="footer-right">
+                            <a href="#"><img src="images/accomplish.png"> | </a>
+                            <a href="https://lau.edu.lb"><img src="images/lau.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        
+        <a href="#" id="back-to-top"></a>
+        <div id="preloader">
+            <div></div>
+        </div>
+
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/enquire.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.plugin.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+    <script src="js/countdown-custom.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc5d1RS_0yWJ1Hyw2hGWfbRZ9KKaxFAZo"></script>
+    <script src="js/map.js"></script>
+    <script src="js/designesia.js"></script>
+	<script src="js/validation.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+    <script>
+        $('#getstarted').click(function(){
+            $('#swipe-bar').addClass('active');
+        });
+        $('#exit_tab').click(function(){
+            $('#swipe-bar').removeClass('active');
+        });
+        const urlParams = new URLSearchParams(window.location.search);
+const myParam = urlParams.get('user_id');
+var changeval = $('#txt_username').val(myParam);
+    </script>
+
+
+</body>
+</html>
